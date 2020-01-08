@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server --open && yarn watch",
+    "dev": "webpack-dev-server && yarn watch",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
     "format": "yarn prettier --write",
@@ -20,6 +20,7 @@
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-typescript": "^7.7.7",
+    "babel-loader": "^8.0.6",
     "concurrently": "^5.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
