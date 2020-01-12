@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const API_URL = "https://api.github.com/users";
 
 class Form {
@@ -11,8 +13,8 @@ class Form {
     this.submitButton = document.querySelector('button[type="submit"]');
     this.submitButton.disabled = !this.searchTerm;
 
-    // this.form = document.querySelector("form");
-    // this.form.addEventListener("submit", this.handleSubmit());
+    this.form = document.querySelector("form");
+    this.form.addEventListener("submit", () => this.handleSubmit(event));
   }
 
   // keyUp Handler
@@ -24,10 +26,16 @@ class Form {
   }
 
   // handlesubmit handler
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   console.log(e);
-  // }
+  async handleSubmit(event) {
+    event.preventDefault();
+    try {
+      this.form.reset();
+      const { data } = await axios.get(this.API_URL);
+      console.log(data);
+    } catch (error) {
+      console.log("Promise rejected! ", error);
+    }
+  }
 }
 
 export default Form;
