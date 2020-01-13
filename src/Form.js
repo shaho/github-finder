@@ -5,7 +5,7 @@ const API_URL = "https://api.github.com/users";
 class Form {
   constructor(addCard) {
     this.addCard = addCard;
-    console.log(this.addCard);
+    // console.log(this.addCard);
 
     this.API_URL = "";
     this.searchTerm = "";
@@ -24,7 +24,6 @@ class Form {
   handleKeyup(event) {
     this.searchTerm = event.target.value.trim();
     this.API_URL = `${API_URL}/${this.searchTerm}`;
-    // console.log(this.API_URL);
     this.submitButton.disabled = !this.searchTerm;
   }
 
