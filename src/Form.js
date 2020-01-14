@@ -5,7 +5,6 @@ const API_URL = "https://api.github.com/users";
 class Form {
   constructor(addCard) {
     this.addCard = addCard;
-    // console.log(this.addCard);
 
     this.API_URL = "";
     this.searchTerm = "";
@@ -35,8 +34,20 @@ class Form {
       const { data } = await axios.get(this.API_URL);
       this.addCard(data);
     } catch (error) {
-      console.error("Promise rejected! ", error);
+      this.formatError("Promise rejected! ", error);
     }
+  }
+
+  // Format Errors
+  formatError(message, error) {
+    console.error(message, error);
+    const errorText = document.createElement("p");
+    errorText.style.color = "red";
+    errorText.style.fontSize = "1.5em";
+    errorText.style.fontStyle = "bold";
+    errorText.innerText = "No user found";
+    this.form.appendChild(errorText);
+    setTimeout(() => this.form.removeChild(errorText), 5000);
   }
 }
 
