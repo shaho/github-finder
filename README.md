@@ -1,13 +1,13 @@
 ## github-finder
 
-github-finder
+github-finder via modern JS approaches
 
 ### Dependencies
 
 - babel
 - eslint
 - prettier
-- typescript
+- axios
 - husky
 - lint-staged
 
