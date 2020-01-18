@@ -4,10 +4,13 @@ github-finder via modern JS approaches
 
 ### Dependencies
 
+- axios
+
+### DevDependencies
+
 - babel
 - eslint
 - prettier
-- axios
 - husky
 - lint-staged
 
