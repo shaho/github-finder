@@ -1,6 +1,6 @@
 ## github-finder
 
-github-finder via modern JS approaches
+github-finder via modern JavaScript approaches
 
 ### Dependencies
 
