@@ -14,7 +14,7 @@ github-finder via modern JavaScript approaches
 - husky
 - lint-staged
 
-#### Development
+### Development
 
 ```bash
 $ yarn && yarn validate
