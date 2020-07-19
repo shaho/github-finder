@@ -1,4 +1,4 @@
-## Github Finder
+## Github Finder (JSOnly)
 
 github-finder via modern JavaScript approaches
 
